@@ -1,9 +1,9 @@
-# Gotpop Blog
+# Gotpop Work
 
-![Deploy Status](https://github.com/gotpop/gotpop-blog/actions/workflows/deploy.yml/badge.svg)
-[![Production](https://img.shields.io/badge/production-gotpop.io-blue)](https://gotpop.io)
+![Deploy Status](https://github.com/gotpop/gotpop-work/actions/workflows/deploy.yml/badge.svg)
+[![Production](https://img.shields.io/badge/production-work.gotpop.io-blue)](https://work.gotpop.io)
 
-Personal blog built with Next.js & Storyblok CMS, deployed to AWS EC2.
+Professional portfolio site built with Next.js & Storyblok CMS, deployed to AWS EC2.
 
 ## Tech Stack
 
@@ -19,7 +19,7 @@ Personal blog built with Next.js & Storyblok CMS, deployed to AWS EC2.
 ## Development
 
 ```bash
-yarn dev        # Start dev server (http://localhost:3000)
+yarn dev        # Start dev server (http://localhost:3001)
 yarn build      # Build for production
 yarn lint       # Run linter
 yarn type-check # Check TypeScript types
@@ -29,6 +29,6 @@ yarn type-check # Check TypeScript types
 
 Automatic deployment via GitHub Actions:
 
-1. Push to `main` branch (development)
-2. Create PR from `main` → `master` (runs lint & type checks)
-3. Merge PR (deploys to EC2 at https://gotpop.io)
+1. Push to `master` branch (triggers deployment)
+2. Create PR to `master` (runs lint, format & type checks)
+3. Merge PR (deploys to EC2 at https://work.gotpop.io)
