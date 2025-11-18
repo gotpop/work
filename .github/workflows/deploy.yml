@@ -55,6 +55,7 @@ jobs:
           echo "Building Docker image for work site..."
           docker build \
             --build-arg STORYBLOK_ACCESS_TOKEN=${{ secrets.STORYBLOK_ACCESS_TOKEN }} \
+            --build-arg STORYBLOK_CONTENT_PREFIX=${{ secrets.STORYBLOK_CONTENT_PREFIX }} \
             --build-arg GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
             -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG \
             -t $ECR_REGISTRY/$ECR_REPOSITORY:latest \

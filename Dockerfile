@@ -36,13 +36,15 @@ RUN apk add --no-cache libc6-compat python3 make g++ && \
 # ========================================
 FROM node:22-alpine AS builder
 
-# Build argument for Storyblok token
+# Build arguments for Storyblok
 ARG STORYBLOK_ACCESS_TOKEN
+ARG STORYBLOK_CONTENT_PREFIX
 
 WORKDIR /app
 
-# Make build arg available as environment variable
+# Make build args available as environment variables
 ENV STORYBLOK_ACCESS_TOKEN=${STORYBLOK_ACCESS_TOKEN}
+ENV STORYBLOK_CONTENT_PREFIX=${STORYBLOK_CONTENT_PREFIX}
 
 # Copy dependencies from deps stage (includes all deps including TypeScript)
 COPY --from=deps /app/node_modules ./node_modules
