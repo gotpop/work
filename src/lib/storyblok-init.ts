@@ -11,7 +11,9 @@ import {
 import {
   BaselineStatusBlock,
   Card,
+  CardImage,
   Cards,
+  CardsImage,
   FooterDefault,
   HeaderDefault,
   HeroDefault,
@@ -44,13 +46,15 @@ export function ensureStoryblokInitialised() {
     throw new Error("STORYBLOK_ACCESS_TOKEN environment variable is required")
   }
 
-  // TODO: Make pages more generic to allow
-  // easier reuse across different projects
+  // TODO: Make pages more generic
+  // TODO: Consolidate cards logic
 
   const components = {
     baseline_status_block: BaselineStatusBlock,
     card: Card,
     cards: withCardsData(Cards),
+    card_image: CardImage,
+    cards_image: withCardsImageData(CardsImage),
     cards_with_image: withCardsImageData(Cards),
     footer_default: FooterDefault,
     header_default: withHeaderData(HeaderDefault),
