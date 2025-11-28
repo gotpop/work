@@ -51,11 +51,10 @@ export function ensureStoryblokInitialised() {
 
   const components = {
     baseline_status_block: BaselineStatusBlock,
-    card: Card,
-    cards: withCardsData(Cards),
     card_image: CardImage,
-    cards_image: withCardsImageData(CardsImage),
-    cards_with_image: withCardsImageData(Cards),
+    card: CardImage,
+    // cards_image: withCardsImageData(CardsImage),
+    cards_with_image: withCardsImageData(CardsImage),
     footer_default: FooterDefault,
     header_default: withHeaderData(HeaderDefault),
     hero_default: HeroDefault,
