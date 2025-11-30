@@ -1,6 +1,7 @@
 import "server-only"
 
 import {
+  withCardsData,
   withCardsImageData,
   withHeaderData,
   withNavData,
@@ -9,7 +10,9 @@ import {
 } from "@gotpop/storyblok"
 import {
   BaselineStatusBlock,
+  Card,
   CardImage,
+  Cards,
   CardsImage,
   FooterDefault,
   HeaderDefault,
@@ -46,8 +49,13 @@ export function ensureStoryblokInitialised() {
   // TODO: Make pages more generic
   // TODO: Consolidate cards logic
 
+  // Note: All used components must be registered
+  // regardless of usage in the app
+
   const components = {
     baseline_status_block: BaselineStatusBlock,
+    card: Card,
+    cards: withCardsData(Cards),
     card_image: CardImage,
     cards_with_image: withCardsImageData(CardsImage),
     footer_default: FooterDefault,

@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["@gotpop/system"],
   },
   images: {
-    domains: ["a.storyblok.com"],
+    remotePatterns: [{ hostname: "a.storyblok.com" }],
   },
 }
 
