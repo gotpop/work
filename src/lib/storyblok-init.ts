@@ -1,7 +1,7 @@
 import "server-only"
 
 import {
-  withCardsData,
+  withCardsImageData,
   withHeaderData,
   withNavData,
   withNotFoundPageData,
@@ -9,8 +9,8 @@ import {
 } from "@gotpop/storyblok"
 import {
   BaselineStatusBlock,
-  Card,
-  Cards,
+  CardImage,
+  CardsImage,
   FooterDefault,
   HeaderDefault,
   HeroDefault,
@@ -22,6 +22,7 @@ import {
   PageFilter,
   PageNotFound,
   PagePost,
+  PagePostImage,
   RichTextBlock,
   RichTextCodeBlock,
   SnippetBlock,
@@ -42,10 +43,13 @@ export function ensureStoryblokInitialised() {
     throw new Error("STORYBLOK_ACCESS_TOKEN environment variable is required")
   }
 
+  // TODO: Make pages more generic
+  // TODO: Consolidate cards logic
+
   const components = {
     baseline_status_block: BaselineStatusBlock,
-    card: Card,
-    cards: withCardsData(Cards),
+    card_image: CardImage,
+    cards_with_image: withCardsImageData(CardsImage),
     footer_default: FooterDefault,
     header_default: withHeaderData(HeaderDefault),
     hero_default: HeroDefault,
@@ -56,6 +60,7 @@ export function ensureStoryblokInitialised() {
     not_found: withNotFoundPageData(PageNotFound),
     page_default: withPageData(PageDefault),
     page_filter: withPageData(PageFilter),
+    page_post_image: withPageData(PagePostImage),
     page_post: withPageData(PagePost),
     rich_text_block: RichTextBlock,
     rich_text_code_block: RichTextCodeBlock,
