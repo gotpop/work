@@ -1,7 +1,7 @@
 import {
   generateAllStaticParams,
   getConfig,
-  getStoryblokData,
+  getInitializedStoryblokApi,
   handleStoryblokPathRedirect,
   normalizeStoryblokPath,
 } from "@gotpop/storyblok"
@@ -35,11 +35,19 @@ export default async function Page({ params }: PageParams) {
 
   const fullPath = normalizeStoryblokPath(slug, config)
 
-  const { data: story, error } = await getStoryblokData("story", { fullPath })
+  const storyblokApi = getInitializedStoryblokApi()
 
-  if (error || !story) {
+  try {
+    const response = await storyblokApi.get(`cdn/stories/${fullPath}`)
+    const story = response?.data?.story
+
+    if (!story) {
+      notFound()
+    }
+
+    return <StoryblokStory story={story} />
+  } catch (error) {
+    console.error(`[Page] Failed to fetch story: ${fullPath}`, error)
     notFound()
   }
-
-  return <StoryblokStory story={story} />
 }
