@@ -213,10 +213,10 @@
   dependencies:
     dotenv "^16.0.0"
 
-"@gotpop/storyblok@^0.1.62":
-  version "0.1.62"
-  resolved "https://npm.pkg.github.com/download/@gotpop/storyblok/0.1.62/69fc678ad9c3ec90bdf59a437b3222935218daf6#69fc678ad9c3ec90bdf59a437b3222935218daf6"
-  integrity sha512-Smu8Luzd9uRv7yRfLHsWKcI6hWmLEvhXTH2ldh4qjYH9EAqhii5ngL9LGQucV/AsNrVcwbWhaq26nDP5n0nFmA==
+"@gotpop/storyblok@^0.1.65":
+  version "0.1.65"
+  resolved "https://npm.pkg.github.com/download/@gotpop/storyblok/0.1.65/8f1f084da79c614b4ec88e09f53f9a14ce34287e#8f1f084da79c614b4ec88e09f53f9a14ce34287e"
+  integrity sha512-awdr8lHV15YY1JeKwfrPg+JNIJWgTNlrrwz1Nh6/CdRzGTKps0nmyPWi/ccxAIDQ7EQsuQdudE8APqGzJDZCyA==
   dependencies:
     "@storyblok/react" "^5.0.0"
 
