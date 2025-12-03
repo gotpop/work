@@ -31,19 +31,21 @@
     "node": ">=22.20.0"
   },
   "dependencies": {
+    "@aws-sdk/client-lambda": "^3.940.0",
     "@gotpop/scripts": "^0.1.7",
-    "@gotpop/storyblok": "^0.1.74",
-    "@gotpop/system": "^0.1.204",
+    "@gotpop/storyblok": "^0.1.78",
+    "@gotpop/system": "^0.1.214",
     "@storyblok/react": "5.4.18",
     "next": "16.0.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
     "server-only": "^0.0.1",
-    "storyblok-rich-text-react-renderer": "^3.0.1"
+    "storyblok-rich-text-react-renderer": "^3.0.1",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.6",
+    "@biomejs/biome": "^2.3.8",
     "@types/node": "^20",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
@@ -51,7 +53,7 @@
     "raw-loader": "^4.0.2",
     "storyblok": "^4.6.9",
     "storyblok-generate-ts": "^2.2.0",
-    "typescript": "^5"
+    "typescript": "~5.7.0"
   },
   "storyblok": {
     "token": "env:STORYBLOK_ACCESS_TOKEN",

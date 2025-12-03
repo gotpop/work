@@ -3,10 +3,12 @@ import "server-only"
 import {
   withCardsData,
   withCardsImageData,
+  withFormBuilderData,
   withHeaderData,
   withNavData,
   withNotFoundPageData,
   withPageData,
+  withPopoverData,
 } from "@gotpop/storyblok"
 import {
   BaselineStatusBlock,
@@ -15,6 +17,10 @@ import {
   Cards,
   CardsImage,
   FooterDefault,
+  FormBuilder,
+  FormInputButtonSubmit,
+  FormInputText,
+  FormInputTextArea,
   HeaderDefault,
   HeroDefault,
   LinkList,
@@ -26,15 +32,16 @@ import {
   PageNotFound,
   PagePost,
   PagePostImage,
+  Popover,
   RichTextBlock,
   RichTextCodeBlock,
   SnippetBlock,
 } from "@gotpop/system"
 import { apiPlugin, getStoryblokApi, storyblokInit } from "@storyblok/react/rsc"
+import { submitFormAction } from "@/lib/form-actions"
 
 let isInitialized = false
 
-/** Ensures Storyblok is initialized with all registered components. */
 export function ensureStoryblokInitialised() {
   if (isInitialized) {
     return getStoryblokApi()
@@ -46,12 +53,6 @@ export function ensureStoryblokInitialised() {
     throw new Error("STORYBLOK_ACCESS_TOKEN environment variable is required")
   }
 
-  // TODO: Make pages more generic
-  // TODO: Consolidate cards logic
-
-  // Note: All used components must be registered
-  // regardless of usage in the app
-
   const components = {
     baseline_status_block: BaselineStatusBlock,
     card: Card,
@@ -59,6 +60,10 @@ export function ensureStoryblokInitialised() {
     card_image: CardImage,
     cards_with_image: withCardsImageData(CardsImage),
     footer_default: FooterDefault,
+    form_builder: withFormBuilderData(FormBuilder, submitFormAction),
+    form_input_button_submit: FormInputButtonSubmit,
+    form_input_text: FormInputText,
+    form_input_textarea: FormInputTextArea,
     header_default: withHeaderData(HeaderDefault),
     hero_default: HeroDefault,
     link_list: LinkList,
@@ -70,6 +75,7 @@ export function ensureStoryblokInitialised() {
     page_filter: withPageData(PageFilter),
     page_post_image: withPageData(PagePostImage),
     page_post: withPageData(PagePost),
+    popover: withPopoverData(Popover),
     rich_text_block: RichTextBlock,
     rich_text_code_block: RichTextCodeBlock,
     snippet_block: SnippetBlock,
