@@ -663,17 +663,17 @@
   dependencies:
     dotenv "^16.0.0"
 
-"@gotpop/storyblok@^0.1.81":
-  version "0.1.81"
-  resolved "https://npm.pkg.github.com/download/@gotpop/storyblok/0.1.81/a6612e7ef9b98a0fcfe41f30e00b5945c7e77bb0#a6612e7ef9b98a0fcfe41f30e00b5945c7e77bb0"
-  integrity sha512-GN/mYiKJZEHyeYzzQCrx828SwPRGB2C7uUU6unjOo1dOrMbBbXg2ivNu0LK2lENm/SfpFDGRrGESDpEguPTY5w==
+"@gotpop/storyblok@^0.1.83":
+  version "0.1.83"
+  resolved "https://npm.pkg.github.com/download/@gotpop/storyblok/0.1.83/ef38fed3871776dc2e539081f7f892a9d0d119b2#ef38fed3871776dc2e539081f7f892a9d0d119b2"
+  integrity sha512-UByBkVYUID6SPIVClBMFrXXMLiFCU+5sc0y3hcMuwMTnQD6/clsLWzDwdGl4wtXWQPwAQZfS6j4M+e7W0l97QA==
   dependencies:
     "@storyblok/react" "^5.0.0"
 
-"@gotpop/system@^0.1.222":
-  version "0.1.222"
-  resolved "https://npm.pkg.github.com/download/@gotpop/system/0.1.222/391a21440fbb2be248f221cc36dd3b2aa0484d9c#391a21440fbb2be248f221cc36dd3b2aa0484d9c"
-  integrity sha512-oAwrUss8nWHqKlsc+jR36/zl8nS5eoDi+2apJU1Jr9Jgf61MnxExuRi86yYTYWDXW7la0FWzXVtEGu0z1SouQg==
+"@gotpop/system@^0.1.224":
+  version "0.1.224"
+  resolved "https://npm.pkg.github.com/download/@gotpop/system/0.1.224/4b744926b58a78ff6ce9d2fab83e29b7e09361ca#4b744926b58a78ff6ce9d2fab83e29b7e09361ca"
+  integrity sha512-6WevKCAudrlEyi6rNdoWqL07GGGn4kL4vavzWdqg0KAesPuClQ23QTeeqM/5GE5sJz03sDsJ9B8yY9I+c9l/Nw==
   dependencies:
     "@next/font" "^14.2.15"
     "@storyblok/react" "^5.4.18"
