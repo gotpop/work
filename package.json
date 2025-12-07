@@ -36,7 +36,7 @@
     "@gotpop/storyblok": "^0.1.88",
     "@gotpop/system": "^0.1.233",
     "@storyblok/react": "5.4.18",
-    "next": "16.0.0",
+    "next": "^16.0.7",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
