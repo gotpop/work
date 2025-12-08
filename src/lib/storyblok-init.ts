@@ -7,6 +7,7 @@ import {
   withNavData,
   withNotFoundPageData,
   withPageData,
+  withPaginationData,
   withPopoverData,
 } from "@gotpop/storyblok"
 import {
@@ -29,6 +30,7 @@ import {
   NavItemDefault,
   PageDefault,
   PageNotFound,
+  PaginationDefault,
   Popover,
   RichTextBlock,
   RichTextCodeBlock,
@@ -70,6 +72,7 @@ export function ensureStoryblokInitialised() {
     nav_item_default: NavItemDefault,
     not_found: withNotFoundPageData(PageNotFound),
     page_default: withPageData(PageDefault),
+    pagination_default: withPaginationData(PaginationDefault),
     popover: withPopoverData(Popover),
     rich_text_block: RichTextBlock,
     rich_text_code_block: RichTextCodeBlock,
