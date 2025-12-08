@@ -5,7 +5,7 @@ import {
   handleStoryblokPathRedirect,
   normalizeStoryblokPath,
 } from "@gotpop/storyblok"
-import { StoryblokStory } from "@storyblok/react/rsc"
+import { StoryblokServerComponent } from "@storyblok/react/rsc"
 import { notFound } from "next/navigation"
 import { ensureStoryblokInitialised } from "@/lib/storyblok-init"
 
@@ -45,7 +45,7 @@ export default async function Page({ params }: PageParams) {
       notFound()
     }
 
-    return <StoryblokStory story={story} />
+    return <StoryblokServerComponent blok={story.content} story={story} />
   } catch (error) {
     console.error(`[Page] Failed to fetch story: ${fullPath}`, error)
     notFound()
