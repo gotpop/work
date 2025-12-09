@@ -70,12 +70,7 @@ export async function submitFormAction(formData: FormData): Promise<FormState> {
       Payload: Buffer.from(payload),
     })
 
-    const response = await lambda.send(command)
-    const responsePayload = response.Payload
-      ? JSON.parse(Buffer.from(response.Payload).toString())
-      : null
-
-    console.log("[FormBuilder] Lambda response:", responsePayload)
+    await lambda.send(command)
 
     return {
       errors: {},
