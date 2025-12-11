@@ -670,10 +670,10 @@
   dependencies:
     "@storyblok/react" "^5.0.0"
 
-"@gotpop/system@^0.1.247":
-  version "0.1.247"
-  resolved "https://npm.pkg.github.com/download/@gotpop/system/0.1.247/bd27a53493ebb5d632245651f04dbc6d1b1860e9#bd27a53493ebb5d632245651f04dbc6d1b1860e9"
-  integrity sha512-y7/FFkZ2ovVIS9Y/4hFLi9njYGenewCECNn6ylZz4pufX/WfhJnr0gk1aUJiWsNuT4sTKqc48fJnjMbwosi/aA==
+"@gotpop/system@^0.1.248":
+  version "0.1.248"
+  resolved "https://npm.pkg.github.com/download/@gotpop/system/0.1.248/7af7f705383166d872080876e040998e9f01be5f#7af7f705383166d872080876e040998e9f01be5f"
+  integrity sha512-X156gVqY6UVpEIp31ciQ1hU9TOqkdJTeo+wRqmpyw6vsxbeXg8rfbs2dBJMWMcamq/HxUNuUEuxPEtt3NTEw7g==
   dependencies:
     "@next/font" "^14.2.15"
     "@storyblok/react" "^5.4.18"
