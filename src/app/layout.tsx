@@ -15,6 +15,10 @@ export async function generateMetadata(): Promise<Metadata> {
     icons: {
       icon: "/logo.svg",
     },
+    other: {
+      "theme-color": "#1a4a5c",
+      "apple-mobile-web-app-status-bar-style": "default",
+    },
   }
 }
 
