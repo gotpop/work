@@ -2,6 +2,7 @@ import "@/lib/storyblok-init"
 import "@gotpop/system/styles"
 import { getConfig } from "@gotpop/storyblok"
 import { inter, monaspace } from "@gotpop/system/fonts"
+import "./theme.css"
 
 import type { Metadata, Viewport } from "next"
 
@@ -26,7 +27,6 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       "theme-color": "#1a4a5c",
       "apple-mobile-web-app-status-bar-style": "default",
-      "apple-mobile-web-app-capable": "yes",
     },
   }
 }
